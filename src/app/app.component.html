@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-black">
+    <div class="navbar-left">
+      <div class="p-2" routerLinkActive="active"><a class="text-warning" routerLink="search">Home</a></div>
+    </div>
+    <div class="navbar-right text-warning">
+      <p>{{ currentTime | date}}</p>
+    </div>
+</nav>
+<div class="text-center text-warning">
+    <h1>
+      {{ title }}!
+    </h1>
+    <img width="300" alt="League of Legends Logo" src="../assets/img/LoL_logo.png">
+</div>
+    <router-outlet></router-outlet>
+
+
+
+
+
+

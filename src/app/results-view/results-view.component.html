@@ -1,0 +1,17 @@
+<div class="text-center mt-5">
+  <div class="spinner-border text-warning" style="width: 5rem;height: 5rem;" *ngIf="isLoading"></div>
+  <div class="text-danger" *ngIf="isGame404"> Can't find any active game !</div>
+  <div class="text-danger" *ngIf="isSum404"> Can't fetch any data from that summoner name !</div>
+</div>
+<div class="d-flex flex-column justify-content-center">
+  <div class="p-4">
+    <app-results-list *ngIf="!isLoading && !isGame404 && !isSum404"
+                      [players]="teamOne"
+                      [teamId]="1"></app-results-list>
+  </div>
+  <div class="p-4">
+    <app-results-list *ngIf="!isLoading && !isGame404 && !isSum404"
+                      [players]="teamTwo"
+                      [teamId]="2"></app-results-list>
+  </div>
+</div>

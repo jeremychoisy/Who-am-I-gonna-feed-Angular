@@ -1,0 +1,23 @@
+<div class="p-2 list-group-item border-dark"[ngClass]="{'bg-dkblue': teamId === 1,
+                  'bg-dkred': teamId === 2}"
+                  style="width: 350px;height: 280px;"
+>
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-row p-2">
+      <img class="p-2" height="150px" width="150px" [src]="sumIconPath" alt="summoner icon"/>
+      <div class="d-flex flex-column p-2 text-truncate text-light">
+        <p class="p-0  font-weight-bold">{{ player.summonerName }}</p>
+        <p class="p-0">{{ player.division }} {{ player.tier}}</p>
+        <p class="p-0 font-italic ">{{ player.wins }} W - {{ player.losses }} L</p>
+      </div>
+    </div>
+    <div class="d-flex flex-row p-2 justify-content-around">
+      <img class="p-2" width="75px" height="75px" [src]="champIconPath"  alt="champ icon"/>
+      <div class="p-2">
+        <img width="75px" height="75px" [src]="mainRuneIconPath" alt="main rune icon"/>
+        <img width="25px" height="25px" [src]="secondaryRuneIconPath" alt="secondary rune icon"/>
+      </div>
+      <img class="p-2" width="75px" height="75px" [src]="tierIconPath"  alt="tier icon"/>
+    </div>
+  </div>
+</div>

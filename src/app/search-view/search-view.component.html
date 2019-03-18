@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="p-lg-5">
+    <h2 class="text-warning">Enter your summoner name :</h2>
+    <form (ngSubmit)="onSubmit()" #summonerForm="ngForm">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" required
+        [(ngModel)]="summonerName" name="summonerName">
+      </div>
+      <button class="btn btn-warning" type="submit" >To the rift !</button>
+    </form>
+  </div>
+  <img class="img-fluid" src="../../assets/img/background.png" alt="background">
+</div>
